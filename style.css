@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root{
+    /*COLOR*/
+    --background: #1b1b1b;
+    --primary: #fff;
+    --secondary:#111111;
+    --tertiary:rgba(19, 17, 17, 0.685);
+    --on-primary: #333;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor_nav{
+    width: 100%;
+    height: 4rem;
+    position: fixed;
+    border-bottom: 1px solid var(--primary);
+    box-shadow: 0 2px 10px var(--primary);
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor_nube{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    padding: 0 0 0 1rem;
+}
+
+.titulo_proyecto{
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px var(--primary);
+    font-weight: 900;
+    color: var(--primary);
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.imagen_nube{
+    width: 4rem;
+}
+
+
+/*---------seccion obtener clima------------*/
+
+.contenedor_clima{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+}
+
+
+.informacion_clima{
+    width: 500px;
+    height: 500px;
+    background-color: var(--background);
+    border-radius: 1rem;
+    box-shadow: 0 0 6px 1px var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/*-------------Desaparecer cuando se envie formulario-----------------*/
+
+.titulo_clima{
+    color: var(--primary);
+    font-size: 2rem;
+    width: 100%;
+    font-family: "Nunito Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 0  0 4rem 0;
+}
+
+.contenedor_informacion_pais{
+    width: 100%;
+    height: 100%;
+    display: flex;/*al buscar tiene que desaparecer-*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario_pais{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 16rem;
+}
+
+.obtener_pais{
+    height: 1.5rem;
+    border-radius: 3px;
+    font-family: "Nunito Sans", sans-serif;
+    border: none;
+    font-size: 1rem;
+    background-color:var(--background);
+    outline:none;
+    padding: 8px 10px 5px 5px;
+    transition: 0.3s;
+    border-bottom: 1px solid var(--primary);
+}
+
+
+
+.obtener_pais:only-of-type{
+    color: var(--primary);
+}
+
+.obtener_pais:focus{
+    color: var(--primary);
+}
+
+.obtener_pais:hover{
+    background-color: #272727;
+}
+
+.obtener_pais_boton{
+    border: none;
+    outline: none;
+    background-color: var(--on-primary);
+    color: var(--primary);
+    font-size: 0.8rem;
+    padding: 8px 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-family: "Nunito Sans", sans-serif;
+
+}
+
+.obtener_pais_boton:hover{
+    background-color: var(--primary);
+    color: var(--secondary);
+    box-shadow: 0 4px 8px 0 var(--secondary);
+}
+
+
+/*----------mostrar al obtener pais----------*/
+
+.contenedor_pais{
+    width: 100%;
+    height: 100%;
+    display: none;/*al buscar tiene que aparecer*/
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.contenedor_dato_titulo{
+    width: 95%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.2px solid #ffffff5e;
+    position: relative;
+}
+
+.pais_ubicacion{
+    width: 2rem;
+    padding: 0 0.5rem 0 0.5rem;
+    object-fit: cover;
+}
+
+.pais_ubicacion_texto{
+    color: var(--on-primary);
+    font-size: 2.4rem;
+    color: var(--primary);
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.boton_volver{
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background-color: var(--background);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
+    font-family: "Nunito Sans", sans-serif;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    svg{
+        color: var(--primary);
+    }
+}
+
+.boton_volver:hover{
+    color: var(--secondary);
+    scale: 1.1;
+}
+
+.contenedor_dato_one{
+    background-color:var(--tertiary);
+    width: 95%;
+    height: 8.2rem;
+    border-radius: 0.5rem;
+    display: flex;
+
+}
+
+.datos_clima_one{
+    display: flex;
+    justify-content: centers;
+    color: var(--primary);
+    height: 100%;
+    width: 50%;
+}
+
+.temperatura{
+    color: var(--primary) ;
+    font-weight: 400;
+    padding: 0 0 0 1rem;
+    font-size: 6rem;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.tipo_clima_one{
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.contenedor_dia_noche{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen_noche{
+    width: 7rem;
+    object-fit: cover;
+    display: none; /*---------Aparece si es de noche ----------*/
+    filter: drop-shadow(0 0 10px var(--on-primary));
+}
+
+.imagen_dia{
+    width: 8rem;
+    filter: drop-shadow(0 0 7px rgb(221, 171, 5));
+    display: none;/*--------Aparece si es de dia----------*/
+}
+
+.contenedor_fila_one{
+    width: 95%;
+    height: 8rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*------sensacion termica-------*/
+.contenedor_dato_two{
+    width: 48%;
+    height: 100%;
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+}
+
+/*------sensacion viibilidad-------*/
+.contenedor_dato_three{
+    width: 48%;
+    height: 100%;
+    background-color:var(--tertiary);
+    border-radius: 0.5rem;
+}
+
+
+
+.contenedor_fila_two{
+    width: 95%;
+    height: 8rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*------Humedad-------*/
+.contenedor_dato_four{
+    width: 48%;
+    height: 100%;
+    background-color: var(--tertiary);
+    border-radius: 0.5rem;
+}
+
+
+/*------Probabilidad de lluvia-------*/
+.contenedor_dato_five{
+    width: 48%;
+    height: 100%;
+    background-color:var(--tertiary);
+    border-radius: 0.5rem;
+}
+
+.contenedor_dato_one, .contenedor_dato_two, .contenedor_dato_three, .contenedor_dato_four, .contenedor_dato_five{
+    transition: .3s;
+    cursor: pointer;
+} 
+
+.contenedor_dato_two:hover, .contenedor_dato_three:hover, .contenedor_dato_four:hover, .contenedor_dato_five:hover{
+    scale: 1.06;
+} 
+
+.datos_clima_two, .datos_clima_three, .datos_clima_four, .datos_clima_five{
+    display: flex;
+    align-items: center;
+}
+
+.visibilidad, .sensacionTermica, .humedad, .lluvia {
+    color: #585858;
+    font-weight: 700;
+    font-size: .9rem;
+    font-family: "Nunito Sans", sans-serif;
+    padding: 1.2rem 0 0 1rem;
+}
+
+.dato_visibilidad, .dato_humedad, .dato_lluvia, .dato_termica{
+    color: var(--primary);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 2rem;
+    padding: 2rem 0 0 0;
+} 
+
+.tipo_clima{
+    font-size: 1rem;
+}
+
+.logo_one, .logo_two, .logo_three{
+    color: var(--primary);
+    width: 3.5rem;
+    padding: 1rem 2rem 0 1rem;
+}
+
+.logo_four{
+    width: 5rem;
+    padding: 1rem 2rem 0 1rem;
+    object-fit: cover;
+}
+
+
+@media (max-width: 505px){
+    .informacion_clima{
+        width: 100%;
+        height: 100%;
+    }
+    .contenedor_pais{
+        justify-content: center;
+    }
+    .temperatura{
+        font-size: 4.6rem;
+        padding: .5rem 0 0 1.5rem;
+    }
+    .imagen_dia{
+        width: 7rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

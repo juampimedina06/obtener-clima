@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima de tu pais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/sol-removebg-preview.png">
+</head>
+<body>
+    <header class="contenedor_nav">
+        <nav class="nav">
+            <div class="contenedor_nube">
+                <img class="imagen_nube" src="./img/sol.png" alt="">
+                <h2 class="titulo_proyecto">ObtenerClima</h2>
+            </div>
+        </nav>
+    </header>
+    <section class="contenedor_clima">
+        <div class="informacion_clima">
+            <div class="contenedor_informacion_pais">
+                <h1 class="titulo_clima">Ingrese su pais</h1>
+                <form id="formulario_pais">
+                    <input class="obtener_pais" type="text" placeholder="Tu pais">
+                    <button class="obtener_pais_boton">Buscar</button>
+                </form>
+            </div>
+            
+
+            
+        <div class="contenedor_pais">
+            <div class="contenedor_dato_titulo">
+                    <img class="pais_ubicacion" src="./img/ubicacion.png" alt="">
+                    <h3 class="pais_ubicacion_texto"></h3>
+                    <button class="boton_volver">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000" fill="none">
+                            <path d="M4.80823 9.44118L6.77353 7.46899C8.18956 6.04799 8.74462 5.28357 9.51139 5.55381C10.4675 5.89077 10.1528 8.01692 10.1528 8.73471C11.6393 8.73471 13.1848 8.60259 14.6502 8.87787C19.4874 9.78664 21 13.7153 21 18C19.6309 17.0302 18.2632 15.997 16.6177 15.5476C14.5636 14.9865 12.2696 15.2542 10.1528 15.2542C10.1528 15.972 10.4675 18.0982 9.51139 18.4351C8.64251 18.7413 8.18956 17.9409 6.77353 16.5199L4.80823 14.5477C3.60275 13.338 3 12.7332 3 11.9945C3 11.2558 3.60275 10.6509 4.80823 9.44118Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+            </div>
+            <div class="contenedor_dato_one">
+                <div class="datos_clima_one">
+                    <p class="temperatura">°<span class="tipo_clima_one">c</span></p>                
+                </div>
+                <div class="contenedor_dia_noche">
+                    <img class="imagen_noche" src="./img/luna-removebg-preview.png" alt="imagen_luna" >
+                    <img class="imagen_dia" src="./img/sol-removebg-preview.png" alt="imagen_sol">
+                </div>
+            </div>
+
+            <div class="contenedor_fila_one">
+                <div class="contenedor_dato_two">
+                    <p class="sensacionTermica">Sensacion termica</p>
+                    <div class="datos_clima_two">
+                        <svg class="logo_one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="#000000" fill="none">
+                            <path d="M16.5001 22C18.7092 22 20.5001 20.2091 20.5001 18C20.5001 16.9335 20.0827 15.9646 19.4024 15.2475C18.8957 14.7134 18.6424 14.4463 18.5712 14.2679C18.5001 14.0895 18.5001 13.8535 18.5001 13.3815V4C18.5001 2.89543 17.6046 2 16.5001 2C15.3955 2 14.5001 2.89543 14.5001 4V13.3815C14.5001 13.8535 14.5001 14.0895 14.4289 14.2679C14.3577 14.4463 14.1044 14.7134 13.5977 15.2475C12.9174 15.9646 12.5001 16.9335 12.5001 18C12.5001 20.2091 14.2909 22 16.5001 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M10.3133 15.8303C8.67792 15.5416 7.36329 14.104 7.20333 12.2607C7.01373 10.076 8.51806 8.14861 10.5634 7.95588C10.883 7.92576 11.197 7.9398 11.5 7.99327M10.2201 4L10.323 5.18677M6.04201 7.57572L5.18359 6.81058M4.611 12.505L3.5 12.6097M6.86776 17.0868L6.15499 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>                        
+                        <p class="dato_termica">°</p>
+                    </div>
+                </div>
+
+                <div class="contenedor_dato_three">
+                    <p class="visibilidad">Visibilidad</p>
+                    <div class="datos_clima_three">
+                        <svg class="logo_two" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="#000000" fill="none">
+                            <path d="M21.544 11.045C21.848 11.4713 22 11.6845 22 12C22 12.3155 21.848 12.5287 21.544 12.955C20.1779 14.8706 16.6892 19 12 19C7.31078 19 3.8221 14.8706 2.45604 12.955C2.15201 12.5287 2 12.3155 2 12C2 11.6845 2.15201 11.4713 2.45604 11.045C3.8221 9.12944 7.31078 5 12 5C16.6892 5 20.1779 9.12944 21.544 11.045Z" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                        <p class="dato_visibilidad"><span class="tipo_clima">km</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor_fila_two">
+                <div class="contenedor_dato_four">
+                    <p class="humedad">Humedad</p>
+                    <div class="datos_clima_four">
+                        <svg class="logo_three" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" color="#000000" fill="none">
+                            <path d="M3.5 13.678C3.5 9.49387 7.08079 5.35907 9.59413 2.97222C10.9591 1.67593 13.0409 1.67593 14.4059 2.97222C16.9192 5.35907 20.5 9.49387 20.5 13.678C20.5 17.7804 17.2812 22 12 22C6.71878 22 3.5 17.7804 3.5 13.678Z" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M4 12.284C5.46463 11.8303 8.39159 11.6836 11.9842 13.7016C15.57 15.7157 18.516 14.9984 20 14.1354" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="dato_humedad"><span class="tipo_clima">%</span></p>
+                    </div>
+                </div>
+
+                <div class="contenedor_dato_five">
+                    <p class="lluvia">Probabilidad de lluvia</p>
+                    <div class="datos_clima_five">
+                        <img class="logo_four" src="./img/cloud-3000993_640-removebg-preview.png" alt="">
+                        <p class="dato_lluvia"><span class="tipo_clima">%</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/0386253c28.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script><!--tnerlo siempre antes del codigo-->
+    <script src="clima.js"></script>
+</body>
+</html>
